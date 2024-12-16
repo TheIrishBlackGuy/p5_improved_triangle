@@ -17,6 +17,7 @@ fill(255);
   darRightTri(225, 75, 100, 0);
   point(225,75);
 pop();
+
 //lyndon equal triangle
 push();
 stroke(0, 0, 255);
@@ -27,6 +28,7 @@ fill(255);
   lynTriEqual(475, 100, 100, 0);
   point(475,100);
 pop();
+
 //lyndon right triangle
 push();
 stroke(0, 0, 255);
@@ -37,6 +39,7 @@ fill(255);
   lynTriRight(475, 200, 1, 1, 100, 0);
   point(475,200);
 pop();
+
 //lyndon isosceles triangle
 push();
 stroke(0, 0, 255);
@@ -62,7 +65,8 @@ push();
  pop();
 }
 
-function darRightTri(lx, ly, sc, r){
+//Equilateral - Daria method
+function darEqualTri(lx, ly, sc, r){
   let x1 = -(sc * 0.5);
   let x2 = sc * 0.5;
   let x3 = 0;
@@ -77,7 +81,7 @@ function darRightTri(lx, ly, sc, r){
   pop();
 }
 
-//equal
+//Equilateral - Lyndon method
 function lynTriEqual(lx, ly, sc, r){
   //let side = sc;
   let s2 = sc/2;
@@ -97,7 +101,8 @@ function lynTriEqual(lx, ly, sc, r){
     triangle(x1, y1, x2, y2, x3, y3);
   pop();
 }
-//right
+
+//Right - Lyndon
 function lynTriRight(lx, ly, s1, s2, sc, r){
 
   let s = (Math.sqrt(0.75)/3)
@@ -116,7 +121,7 @@ function lynTriRight(lx, ly, s1, s2, sc, r){
     triangle(x1, x2, x3, y1, y2, y3);
   pop();
 }
-//isosceles 
+//Isosceles - Lyndon
 function lynTriIsosceles(lx, ly, s1, s2, sc, r){
 
   let s = (Math.sqrt(0.75)/3)
@@ -135,7 +140,7 @@ function lynTriIsosceles(lx, ly, s1, s2, sc, r){
   pop();
 }
 
-//hexagon
+//Hexagon - Lyndon
 function lynHex(lx, ly, sc, r){
 
   let y1 = Math.sqrt(0.75)*sc;
