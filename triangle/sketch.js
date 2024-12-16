@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(575,500);
+  createCanvas(1200,1000);
   background(96);
   noFill();
   angleMode(DEGREES);
@@ -8,50 +8,77 @@ function setup() {
 function draw() {
 
 //daria equal triangle
+{
 push();
 stroke(255, 0, 0);
 strokeWeight(3);
-  darRightTri(100, 75, 100, 0);
+  darEqualTri(100, 75, 100, 0);
   point(100,75);
 fill(255);
-  darRightTri(225, 75, 100, 0);
+  darEqualTri(225, 75, 100, 0);
   point(225,75);
 pop();
+  }
 
 //lyndon equal triangle
-push();
-stroke(0, 0, 255);
-strokeWeight(3);
-  lynTriEqual(350, 100, 100, 0);
-  point(350,100);
-fill(255);
-  lynTriEqual(475, 100, 100, 0);
+{
+  push();
+  stroke(0, 0, 255);
+  strokeWeight(3);
+    lynTriEqual(350, 100, 100, 0);
+    point(350,100);
+  fill(255,0,0);
+    lynTriEqual(475, 100, 100, 0);
+  fill(0,255,0);
+    lynTriEqual(600, 100, 100);
+  fill(0,0,255);
+    lynTriEqual(725, 100, 100);
   point(475,100);
-pop();
+  pop();
+  }
 
 //lyndon right triangle
-push();
-stroke(0, 0, 255);
-strokeWeight(3);
-  lynTriRight(350, 200, 1, 1, 100, 0);
-  point(350,200);
-fill(255);
-  lynTriRight(475, 200, 1, 1, 100, 0);
-  point(475,200);
-pop();
+{
+  push();
+  stroke(0, 0, 255);
+  strokeWeight(3);
+    lynTriRight(350, 200, 1, 1, 100, 0);
+    point(350,200);
+  fill(255,0,0);
+    lynTriRight(475, 200, 1, 1, 100, 0);
+  fill(0,255,0);
+    lynTriRight(600, 200, 1, 3, 100);
+  fill(0,0,255);
+    lynTriRight(725, 200, 1);
+  fill(0,255,255);
+    lynTriRight(850, 200, 1,20);
+    point(475,200);
+  pop();
+  }
 
 //lyndon isosceles triangle
-push();
-stroke(0, 0, 255);
-strokeWeight(3);
-  lynTriIsosceles(350, 300, 1, 1, 100, 0);
-  point(350,300);
-fill(255);
-  lynTriIsosceles(475, 300, 1, 1, 100, 0);
+{
+  push();
+  stroke(0, 0, 255);
+  strokeWeight(3);
+    lynTriIsosceles(350, 300, 1, 1, 100, 0);
+    point(350,300);
+  fill(255,0,0);
+    lynTriIsosceles(475, 300, 1, 1, 100, 0);
+  fill(0,255,0);
+    lynTriIsosceles(600, 300, 1, 1, 100);
+  fill(0,0,255);
+    lynTriIsosceles(725, 300, 1, 1, 100, 0);
+  fill(255,0,255);
+    lynTriIsosceles(850, 300, 1, 1, 100, 0);
+  fill(255,255,0);
+    lynTriIsosceles(975, 300, 1, 1, 100, 0);
   point(475,300);
-pop();
+  pop();
+  }
 
 //lyndon hexagon
+{
 push();
  strokeWeight(.5);
  stroke(239,13,103);
@@ -63,6 +90,8 @@ push();
  stroke(0, 0, 255);
   lynHex(150, 250, 100, 45);
  pop();
+  }
+
 }
 
 //Equilateral - Daria method
