@@ -30,9 +30,9 @@ pop();
   fill(255,0,0);
     lynTriEqual(475, 100, 100, 0);
   fill(0,255,0);
-    lynTriEqual(600, 100, 100);
+    lynTriEqual(600, 100, 100, 0);
   fill(0,0,255);
-    lynTriEqual(725, 100, 100);
+    lynTriEqual(725, 100, 100, 0);
   point(475,100);
   pop();
   }
@@ -47,11 +47,11 @@ pop();
   fill(255,0,0);
     lynTriRight(475, 200, 1, 1, 100, 0);
   fill(0,255,0);
-    lynTriRight(600, 200, 1, 3, 100);
+    lynTriRight(600, 200, 1, 1, 100, 0);
   fill(0,0,255);
-    lynTriRight(725, 200, 1);
-  fill(0,255,255);
-    lynTriRight(850, 200, 1,20);
+    lynTriRight(725, 200, 1, 1, 100, 0);
+  fill(255,0,255);
+    lynTriRight(850, 200, 1, 1, 100, 0);
     point(475,200);
   pop();
   }
@@ -66,7 +66,7 @@ pop();
   fill(255,0,0);
     lynTriIsosceles(475, 300, 1, 1, 100, 0);
   fill(0,255,0);
-    lynTriIsosceles(600, 300, 1, 1, 100);
+    lynTriIsosceles(600, 300, 1, 1, 100, 0);
   fill(0,0,255);
     lynTriIsosceles(725, 300, 1, 1, 100, 0);
   fill(255,0,255);
@@ -93,6 +93,8 @@ push();
   }
 
 }
+
+/////////////////////////// functions /////////////////////////
 
 //Equilateral - Daria method
 function darEqualTri(lx, ly, sc, r){
@@ -130,7 +132,6 @@ function lynTriEqual(lx, ly, sc, r){
     triangle(x1, y1, x2, y2, x3, y3);
   pop();
 }
-
 //Right - Lyndon
 function lynTriRight(lx, ly, s1, s2, sc, r){
 
